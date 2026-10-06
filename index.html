@@ -4,93 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homework3</title>
-
+    <title>Document</title>
     <style>
+        /* general style */
         * {
             box-sizing: border-box;
             margin: 0;
-        }
-    /* body styling */
-        body {
-            background-image: url(h.w3\ img.jpeg);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-
-      
-
-/* main div styling */
         .main {
             display: flex;
             flex-direction: column;
-            background-color: rgba(234, 227, 227, 0.594);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-image: url(h.w3\ img.jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* form style */
+        .login-form {
             width: 300px;
-            height: 300px;
-            padding: 10px;
-            margin: auto;
-        }
-
-        main {
-            margin-top: 150px;
-            
-
-        }
-
-        /* the first section styling */
-        .sec1 {
             display: flex;
             flex-direction: column;
-            margin: auto;
+            padding: 20px 10px;
+            justify-content: center;
             align-items: center;
+            background-color: rgba(240, 255, 255, 0.423);
+            font-size: 10px;
+            padding-top: 70px;
+            /* content style */
+
         }
 
-        /* forms in section 1 styling */
-        input[type="text"],input[type="password"],input[type="submit"] {
-            margin: 5px;
-            padding: 10px;
-            width: 95%;
-            background-color: rgba(234, 227, 227, 0.53);
-            border: 0;
+        .login-form h1 {
+            margin-bottom: 20px;
         }
-        
-/* the 2nd section styling */
-        .sec2 {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          margin-top: 0;
 
+        .input-div {
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+
+
+        }
+
+        input[ type="text"],
+        input[type="password"] {
+            background-color: rgba(255, 255, 255, 0.624);
+            border: none;
+            width: 90%;
+            height: 40px;
+            border-radius: 5px;
+            outline: none;
+
+        }
+
+        input[type="button"] {
+            width: 90%;
+            height: 40px;
+            background-color: rgb(4, 91, 4);
+            color: white;
+            font-weight: 500;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input[type="button"]:hover {
+            transform: scale(1.1);
+            transition: 1s;
+            background-color: rgb(255, 187, 0);
+        }
+
+
+        input::placeholder {
+            font-size: smaller;
+        }
+
+        .last-div {
+            display: flex;
+            margin-top: 3px;
+            margin-bottom: 10px;
+            /* justify-content:space-around; */
+
+        }
+
+        .last-div input {
+            margin-left: 12px;
+        }
+
+        .last-div label {
+            margin-right: 75px;
+        }
+
+
+        @media screen and(max-width:200px) {
+            .login-form {
+                width: 200px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <div class="main">
-            <section class="sec1">
-                <h2>Account Login</h2>
-                <form>
-                    <input type="text" placeholder="User name">
-                    <input type="password" placeholder="password">
-                    <input type="submit" value="LOGIN" style="background-color: rgb(9, 126, 9); color: white;">
-                </form>
-            </section>
+    <div class="main">
+        <div class="login-form">
+            <h1>Account login</h1>
+            <div class="input-div">
+                <input type="text" placeholder="username">
+            </div>
 
-            <section class="sec2">
+            <div class="input-div">
+                <input type="password" placeholder="password">
+            </div>
 
-                <form>
-                    <input type="checkbox"><label>remember me</label>
-                </form>
-                <a href="">forgot password?</a>
+            <div class="input-div">
+                <input type="button" value="LOGIN">
+
+                <div class="last-div">
+                    <input type="checkbox">
+                    <label>remember me</label>
+                    <a href="#"> forgot password?</a>
+                </div>
+            </div>
 
 
-
-
-
-            </section>
         </div>
-
-    </main>
 </body>
 
 </html>
